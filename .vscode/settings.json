@@ -1,0 +1,22 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+    "[plaintext]": {
+        "editor.quickSuggestions": false
+    },
+    "editor.tabSize": 2,
+    "window.zoomLevel": 2,
+    "git.confirmSync": false,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.editor.enablePreview": false,
+    "editor.parameterHints.enabled": false,
+    "eslint.format.enable": true,
+    "workbench.activityBar.visible": true,
+    "explorer.confirmDelete": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "todo-tree.tree.showScanModeButton": false,
+    "files.autoSave": "off"
+}
