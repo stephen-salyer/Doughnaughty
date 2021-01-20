@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { GpsFixed, LocationOn } from "@material-ui/icons";
+import { GpsFixed, LocationOn, LocationSearching } from "@material-ui/icons";
 import React from "react";
 
 const useStyles = makeStyles((theme) => ({
@@ -35,11 +35,18 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const locations = [
+  { city: "St. Louis" },
+  { city: "Maryland Heights" },
+  { city: "Creve Coeur" },
+  { city: "Clayton" },
+];
+
 export default function HeroInfo() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="md" style={{ marginTop: -260 }}>
+    <Container maxWidth="md" style={{ marginTop: -320 }}>
       <Box style={{ position: "relative" }}>
         <Box
           style={{
@@ -83,17 +90,27 @@ export default function HeroInfo() {
           </Button>
         </Paper>
         <Box
-          style={{
-            display: "flex",
-            width: "100%",
-            alignItems: "center",
-            flexDirection: "column",
-            marginTop: 16,
-          }}
+          style={{ display: "flex", flexDirection: "column", width: "100%" }}
         >
-          <Typography variant="body2" component="body2">
-            Find out if we deliver to you!
-          </Typography>
+          <Box
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: 16,
+            }}
+          >
+            {locations.map(({ city }) => (
+              <Typography
+                variant="body2"
+                component="body2"
+                color="textSecondary"
+                style={{ marginRight: 8 }}
+              >
+                {city}
+              </Typography>
+            ))}
+          </Box>
+          <Box></Box>
         </Box>
       </Box>
     </Container>
