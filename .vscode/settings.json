@@ -7,7 +7,7 @@
         "editor.quickSuggestions": false
     },
     "editor.tabSize": 2,
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 1,
     "git.confirmSync": false,
     "explorer.confirmDragAndDrop": false,
     "workbench.editor.enablePreview": false,
