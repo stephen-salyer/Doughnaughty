@@ -129,8 +129,9 @@ export default function HeroInfo() {
               marginTop: 16,
             }}
           >
-            {locations.map(({ city }) => (
+            {locations.map(({ city }, i) => (
               <Typography
+                key={i}
                 variant="body2"
                 color="textSecondary"
                 style={{ marginRight: 8 }}
@@ -147,8 +148,8 @@ export default function HeroInfo() {
               paddingTop: 8,
             }}
           >
-            {logos.map(({ logo, alt, width, height, link }) => (
-              <Link href={link} style={{ paddingRight: 8 }}>
+            {logos.map(({ logo, alt, width, height, link }, i) => (
+              <Link href={link} style={{ paddingRight: 8 }} key={i}>
                 <Button>
                   <img
                     src={logo}

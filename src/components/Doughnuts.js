@@ -88,7 +88,7 @@ export default function Doughnuts() {
               alt="doughnuts"
               style={{
                 width: 150,
-                marginLeft: 100,
+                marginLeft: 0,
                 marginTop: -350,
                 position: "fixed",
               }}

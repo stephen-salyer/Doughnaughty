@@ -6,6 +6,7 @@ import Doughnuts from "./components/Doughnuts";
 import HeroInfo from "./components/HeroInfo";
 import "./App.css";
 import { green } from "@material-ui/core/colors";
+import FeaturedItems from "./components/FeaturedItems";
 
 const theme = createMuiTheme({
   palette: {
@@ -18,6 +19,9 @@ const theme = createMuiTheme({
   },
   typography: {
     h3: {
+      fontFamily: '"Nunito"',
+    },
+    subtitle1: {
       fontFamily: '"Nunito"',
     },
     body1: {
@@ -37,6 +41,7 @@ export default function App() {
         <Hero />
         <Doughnuts />
         <HeroInfo />
+        <FeaturedItems />
       </div>
     </ThemeProvider>
   );
