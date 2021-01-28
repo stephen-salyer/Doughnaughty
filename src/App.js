@@ -21,6 +21,9 @@ const theme = createMuiTheme({
     h3: {
       fontFamily: '"Nunito"',
     },
+    h6: {
+      fontFamily: '"Nunito"',
+    },
     subtitle1: {
       fontFamily: '"Nunito"',
     },

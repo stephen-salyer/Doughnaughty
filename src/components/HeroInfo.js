@@ -76,7 +76,7 @@ export default function HeroInfo() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="md" className={classes.margins}>
+    <Container maxWidth="lg" className={classes.margins}>
       <Box style={{ position: "relative" }}>
         <Box
           style={{
