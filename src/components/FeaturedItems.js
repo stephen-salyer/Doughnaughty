@@ -1,4 +1,11 @@
-import { Container, Typography, Box, CardMedia } from "@material-ui/core";
+import {
+  Container,
+  Typography,
+  Box,
+  CardMedia,
+  List,
+  ListItem,
+} from "@material-ui/core";
 import React from "react";
 import LongChocJohn from "../images/Long-Choc-John.png";
 import CerealTop from "../images/Cereal-Top.png";
@@ -9,13 +16,43 @@ import Vampire from "../images/Vampire.png";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
+  container: {
+    marginTop: 96,
+    paddingLeft: 24,
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: 24,
+    },
+  },
   scrollContainer: {
     display: "flex",
-    height: 300,
+    height: 250,
     overflowY: "hidden",
     overflowX: "hidden",
     [theme.breakpoints.down("md")]: {
       overflowX: "scroll",
+      "&::-webkit-scrollbar": {
+        display: "none",
+      },
+    },
+  },
+  featuredItems: {
+    width: 192,
+    height: 192,
+    marginRight: 16,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "start",
+    [theme.breakpoints.down("xs")]: {
+      width: "33vw",
+      height: "33vw",
+    },
+  },
+  cardMedia: {
+    height: "192px",
+    width: "192px",
+    [theme.breakpoints.down("xs")]: {
+      width: "33vw",
+      height: "33vw",
     },
   },
 }));
@@ -63,42 +100,37 @@ export default function FeaturedItems() {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="lg" style={{ marginTop: 96 }}>
+    <Container disableGutters maxWidth="lg" className={classes.container}>
       <Typography variant="h6" style={{ fontWeight: "bold" }}>
         Featured Items
       </Typography>
-      <Box pt={2} className={classes.scrollContainer}>
-        {FeaturedList.map(({ name, img, alt, cost }, i) => (
-          <Box pr={2} key={i}>
-            <Box
-              style={{
-                width: 192,
-                height: 192,
-                display: "flex",
-                FlexDirection: "column",
-              }}
-            >
-              <CardMedia
-                component="img"
-                alt={alt}
-                height="192"
-                width="192"
-                image={img}
-                title={name}
-              />
-            </Box>
-            <Typography variant="subtitle1" style={{ fontWeight: "600" }}>
-              {name}
-            </Typography>
-            <Typography
-              variant="body1"
-              color="textSecondary"
-              style={{ lineHeight: 1 }}
-            >
-              ${cost}
-            </Typography>
-          </Box>
-        ))}
+      <Box className={classes.scrollContainer}>
+        <List style={{ display: "flex" }}>
+          {FeaturedList.map(({ name, img, alt, cost }, i) => (
+            <div key={i}>
+              <ListItem disableGutters className={classes.featuredItems}>
+                <CardMedia
+                  component="img"
+                  alt={alt}
+                  className={classes.cardMedia}
+                  image={img}
+                  title={name}
+                />
+
+                <Typography variant="subtitle1" style={{ fontWeight: "600" }}>
+                  {name}
+                </Typography>
+                <Typography
+                  variant="body1"
+                  color="textSecondary"
+                  style={{ lineHeight: 1 }}
+                >
+                  ${cost}
+                </Typography>
+              </ListItem>
+            </div>
+          ))}
+        </List>
       </Box>
     </Container>
   );
