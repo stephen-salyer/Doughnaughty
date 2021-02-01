@@ -4,7 +4,8 @@ import {
   Box,
   CardMedia,
   List,
-  ListItem,
+  CardActionArea,
+  CardContent,
 } from "@material-ui/core";
 import React from "react";
 import LongChocJohn from "../images/Long-Choc-John.png";
@@ -25,7 +26,6 @@ const useStyles = makeStyles((theme) => ({
   },
   scrollContainer: {
     display: "flex",
-    height: 250,
     overflowY: "hidden",
     overflowX: "hidden",
     [theme.breakpoints.down("md")]: {
@@ -37,8 +37,6 @@ const useStyles = makeStyles((theme) => ({
   },
   featuredItems: {
     width: 192,
-    height: 192,
-    marginRight: 16,
     display: "flex",
     flexDirection: "column",
     alignItems: "start",
@@ -107,8 +105,8 @@ export default function FeaturedItems() {
       <Box className={classes.scrollContainer}>
         <List style={{ display: "flex" }}>
           {FeaturedList.map(({ name, img, alt, cost }, i) => (
-            <div key={i}>
-              <ListItem disableGutters className={classes.featuredItems}>
+            <CardActionArea key={i} style={{ borderRadius: 5 }}>
+              <CardContent className={classes.featuredItems}>
                 <CardMedia
                   component="img"
                   alt={alt}
@@ -127,8 +125,8 @@ export default function FeaturedItems() {
                 >
                   ${cost}
                 </Typography>
-              </ListItem>
-            </div>
+              </CardContent>
+            </CardActionArea>
           ))}
         </List>
       </Box>

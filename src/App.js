@@ -7,6 +7,7 @@ import HeroInfo from "./components/HeroInfo";
 import "./App.css";
 import { green } from "@material-ui/core/colors";
 import FeaturedItems from "./components/FeaturedItems";
+import Menu from "./components/Menu";
 
 const theme = createMuiTheme({
   palette: {
@@ -45,6 +46,7 @@ export default function App() {
         <Doughnuts />
         <HeroInfo />
         <FeaturedItems />
+        <Menu />
       </div>
     </ThemeProvider>
   );
