@@ -66,7 +66,7 @@ const FeaturedList = [
     name: "Cereal Top",
     img: CerealTop,
     alt: "Cereal Top",
-    cost: "1,99",
+    cost: "1.99",
   },
   {
     name: "Strawberry (GF)",
@@ -75,22 +75,22 @@ const FeaturedList = [
     cost: "2.19",
   },
   {
-    name: "Long-Choc-John",
+    name: "Drumstick",
     img: Drumstick,
-    alt: "Long Choc John",
-    cost: "2.49",
+    alt: "Drumstick",
+    cost: "1.49",
   },
   {
-    name: "Long-Choc-John",
+    name: "Big Ole Bear",
     img: BigOleBear,
-    alt: "Long Choc John",
-    cost: "2.49",
+    alt: "Big Ole Bear",
+    cost: "3.49",
   },
   {
-    name: "Long-Choc-John",
+    name: "Vampire",
     img: Vampire,
-    alt: "Long Choc John",
-    cost: "2.49",
+    alt: "Vampire",
+    cost: "2.19",
   },
 ];
 
